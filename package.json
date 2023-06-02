@@ -36,7 +36,9 @@
 	"type": "module",
 	"dependencies": {
 		"@dqbd/tiktoken": "^1.0.2",
+		"@leonardo-ai/sdk": "^1.28.1",
 		"@picocss/pico": "^1.5.7",
+		"api": "^5.0.8",
 		"langchain": "^0.0.45",
 		"pdfjs-dist": "^3.4.120"
 	}

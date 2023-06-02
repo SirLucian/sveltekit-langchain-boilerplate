@@ -1,7 +1,8 @@
 <script lang="ts">
     import { enhance } from "$app/forms";
     let loading = false;
-    let summary = "";
+    let prompt = "";
+    let count = 1;
     let error = false;
 </script>
 
@@ -16,28 +17,30 @@
 
 <div class="form-container">
 
-  <h1>PDF Summarizer</h1>
+  <h1>WorldSeed</h1>
 
-  <form action="?/summarize" method="post" use:enhance={({ form, data, action, cancel, submitter }) => {
+  <form action="?/generate" method="post" use:enhance={({ form, data, action, cancel, submitter }) => {
     loading = true;
     return async ({ result, update }) => {
       if(result.status === 200){
-        summary = result.data.summary;
+        prompt = result.data.prompt;
+        console.log(prompt)
       } else {
         error = true;
       }
       loading = false;
     };
   }}>
-    <input type="file" name="file" accept=".pdf">
-    <button  aria-busy={loading} type="submit">{loading ? "Please Wait..." : "Summarize"}</button>
+    <input type="text" name="keyword">
+    <input type="range" name="count" bind:value={count} min=1 max=3>
+    <button  aria-busy={loading} type="submit">{loading ? "Please Wait..." : `Generate ${count} ${count === 0 ? ' Image' : " Images"}`}</button>
   </form>
 
-  {#if summary !== "" && !loading}
+  {#if prompt !== "" && !loading}
 
     <article>
-      <h2>Summary</h2>
-      <p>{summary}</p>
+      <h2>Prompts</h2>
+      <p>{prompt}</p>
     </article>
 
   {/if}
