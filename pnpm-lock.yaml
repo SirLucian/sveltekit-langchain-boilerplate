@@ -14,6 +14,7 @@ specifiers:
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte3: ^4.0.0
   langchain: ^0.0.45
+  openapi-types: ^12.1.3
   pdfjs-dist: ^3.4.120
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
@@ -28,8 +29,9 @@ dependencies:
   '@dqbd/tiktoken': 1.0.7
   '@leonardo-ai/sdk': 1.28.1
   '@picocss/pico': 1.5.10
-  api: 5.0.8
+  api: 5.0.8_openapi-types@12.1.3
   langchain: 0.0.45_vgxgcommajp4uwpwjotxqa6si4
+  openapi-types: 12.1.3
   pdfjs-dist: 3.7.107
 
 devDependencies:
@@ -518,22 +520,6 @@ packages:
       - encoding
     dev: false
 
-  /@readme/openapi-parser/2.5.0:
-    resolution: {integrity: sha512-IbymbOqRuUzoIgxfAAR7XJt2FWl6n2yqN09fF5adacGm7W03siA3bj1Emql0X9D2T+RpBYz3x9zDsMhuoMP62A==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      openapi-types: '>=7'
-    dependencies:
-      '@apidevtools/openapi-schemas': 2.1.0
-      '@apidevtools/swagger-methods': 3.0.2
-      '@jsdevtools/ono': 7.1.3
-      '@readme/better-ajv-errors': 1.6.0_ajv@8.12.0
-      '@readme/json-schema-ref-parser': 1.2.0
-      ajv: 8.12.0
-      ajv-draft-04: 1.0.0_ajv@8.12.0
-      call-me-maybe: 1.0.2
-    dev: false
-
   /@readme/openapi-parser/2.5.0_openapi-types@12.1.3:
     resolution: {integrity: sha512-IbymbOqRuUzoIgxfAAR7XJt2FWl6n2yqN09fF5adacGm7W03siA3bj1Emql0X9D2T+RpBYz3x9zDsMhuoMP62A==}
     engines: {node: '>=14'}
@@ -896,13 +882,13 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /api/5.0.8:
+  /api/5.0.8_openapi-types@12.1.3:
     resolution: {integrity: sha512-8FOewZ7z3SRlyPOrL4pbjytW0gEoLn4dg+HnDKZym/vLf2uUh1gs8z0lH0Hlw55bw7rge9vCy5eBA4qZEz68aQ==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
       '@readme/oas-to-har': 20.1.1
-      '@readme/openapi-parser': 2.5.0
+      '@readme/openapi-parser': 2.5.0_openapi-types@12.1.3
       caseless: 0.12.0
       chalk: 4.1.2
       commander: 10.0.1
