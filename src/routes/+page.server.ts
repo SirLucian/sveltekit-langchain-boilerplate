@@ -1,13 +1,12 @@
 import type { Actions } from './$types';
-import { json } from '@sveltejs/kit';
 import { OpenAI } from 'langchain/llms/openai';
 import { loadSummarizationChain } from 'langchain/chains';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import type { Document } from 'langchain/document';
-import { AnalyzeDocumentChain } from 'langchain/chains';
-import { PDFLoader } from 'langchain/document_loaders';
+import { PDFLoader } from 'langchain/document_loaders/fs/pdf';
 import { writeFile } from 'fs/promises';
 import { OPENAI_API_KEY } from '$env/static/private';
+
 
 export const actions = {
 	summarize: async ({ request }) => {

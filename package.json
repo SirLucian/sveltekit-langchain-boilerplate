@@ -37,6 +37,7 @@
 	"dependencies": {
 		"@dqbd/tiktoken": "^1.0.7",
 		"@picocss/pico": "^1.5.10",
+		"@pinecone-database/pinecone": "^0.1.6",
 		"langchain": "^0.0.99",
 		"pdf-parse": "^1.1.1",
 		"pdfjs-dist": "^3.7.107"

@@ -11,9 +11,12 @@ dependencies:
   '@picocss/pico':
     specifier: ^1.5.10
     version: 1.5.10
+  '@pinecone-database/pinecone':
+    specifier: ^0.1.6
+    version: 0.1.6
   langchain:
     specifier: ^0.0.99
-    version: 0.0.99(pdf-parse@1.1.1)
+    version: 0.0.99(@pinecone-database/pinecone@0.1.6)(pdf-parse@1.1.1)
   pdf-parse:
     specifier: ^1.1.1
     version: 1.1.1
@@ -413,6 +416,15 @@ packages:
 
   /@picocss/pico@1.5.10:
     resolution: {integrity: sha512-+LafMsrwPxXQMk6sI///TmSInCwwZmq+K7SikyL3N/4GhhwzyPC+TQLUEqmrLyjluR+uIpFFcqjty30Rtr6GxQ==}
+    dev: false
+
+  /@pinecone-database/pinecone@0.1.6:
+    resolution: {integrity: sha512-tCnVc28udecthhgSBTdcMhYEW+xsR++AdZasp+ZE/AvUD1hOR2IR3edjk9m0sDxZyvXbno2KeqUbLIOZr7sCTw==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      cross-fetch: 3.1.6
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /@playwright/test@1.35.1:
@@ -1523,7 +1535,7 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /langchain@0.0.99(pdf-parse@1.1.1):
+  /langchain@0.0.99(@pinecone-database/pinecone@0.1.6)(pdf-parse@1.1.1):
     resolution: {integrity: sha512-4pECzTgNJq06jCBx5B7QtbMxKdx6yDiKo5jjoZhGXgpmabqtSiQkzw/wjJiER+OfLjb52kQIXentxZcBKJZtLg==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -1683,6 +1695,7 @@ packages:
         optional: true
     dependencies:
       '@anthropic-ai/sdk': 0.4.4
+      '@pinecone-database/pinecone': 0.1.6
       ansi-styles: 5.2.0
       binary-extensions: 2.2.0
       camelcase: 6.3.0

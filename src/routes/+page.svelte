@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
     import { enhance } from "$app/forms";
     let loading = false;
     let summary = "";
